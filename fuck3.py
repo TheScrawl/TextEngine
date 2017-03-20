@@ -123,14 +123,16 @@ class armour(object):
                             #ID        Name                     Type        Piece           Defence   Weight  buyValue    sellValue   count
 #Light
 clothHat =            armour('a1001',  'Cloth Hat',             'light',    'head',         0,        1,       5,         2,          0)
-clothShirt =          armour('a1002',
+clothShirt =          armour('a1002',  'Cloth Shirt',           'light',    'chest',        1,        2,       7,         3,          0)
+clothTrousers =       armour('a1003',  'Cloth Trousers',        'light',    'legs',         1,        2,       5,         2,          0)
+leatherSandals =      armour('a1004',  'Leather Sandals',       'light',    'feet',         0,        1,       3,         1,          0)
 #Medium
 leatherHelmet =       armour('a2001',  'Leather Helmet',        'medium',   'head',         3,        2,      10,         5,          0)
 leatherShoulders =    armour('a2002',  'Leather Shoulderpads',  'medium',   'shoulder',     2,        2,      10,         5,          0)
 leatherChestplate =   armour('a2003',  'Leather Chestplate',    'medium',   'chest',        5,        4,      20,         10,         0)
 leatherGreaves =      armour('a2004',  'Leather Greaves',       'medium',   'legs',         2,        2,      10,         5,          0)
 leatherGloves =       armour('a2005',  'Leather Gloves',        'medium',   'hands',        1,        1,      5,          2,          0)
-leatherBoots =        armour('a2006',  'Leather Boots',         'medium',   'feet',         1,        1,      5,          2,          0)
+leatherBoots =        armour('a2006',  'Leather Boots',         'medium',   'feet',         5,        1,      5,          2,          0)
 leatherShield =       armour('a2007',  'Leather Shield',        'medium',   'shield',       5,        4,      20,         10,         0)
 #Heavy
 steelHelmet =         armour('a3001',  'Steel Helmet',          'heavy',    'head',         5,        4,      15,         10,         0)
@@ -140,10 +142,8 @@ steelGreaves =        armour('a3004',  'Steel Greaves',         'heavy',    'leg
 steelGloves =         armour('a3005',  'Steel Gloves',          'heavy',    'hands',        2,        2,      10,         5,          0)
 steelBoots =          armour('a3006',  'Steel Boots',           'heavy',    'feet',         2,        2,      10,         5,          0)
 steelShield =         armour('a3007',  'Steel Shield',          'heavy',    'shield',       10,       8,      25,         15,         0)
-#
 #Shops
 #Quests
-
 
 def talkNPC(npc):
 
@@ -159,7 +159,7 @@ def talkNPC(npc):
 
 #Print out options into formatted list
     for key in sorted(npc.keys()):
-        if len(key) <= 1:
+         if len(key) <= 1:
             print(key + ': ' + npc.get(key).get('optionHeader'))
 
 
@@ -202,7 +202,7 @@ def talkNPC(npc):
         choice = npc.get(choice)
         talkCont(choice)
    
-    else:
+	else:
         print('Invalid Input')
         talkNPC(npc)
 
