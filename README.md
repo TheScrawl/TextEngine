@@ -10,4 +10,3 @@ Currently Textengine is in a very very very early pre-alpha stage with no real f
 ## Who's working on it?
 Textengine is being developed by:  
 Project Manager and Lead Dev and Complete Badass: [Abe Severinsen (The Scrawl)](https://github.com/TheScrawl)  
-Other Guy: [Arthur Connop (TLGYT)](https://github.com/TLGYT)
