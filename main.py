@@ -341,7 +341,7 @@ def manageInventory():
     print('C: Inspect Items')
     print('D: Drop Items')
     print('E: Exit Menu')
-    playerChoice = input(str.lower('> '))
+    playerChoice = input(str('> ')).lower()
     if playerChoice == 'a':
         num = 1
         print('What weapon would you like to equip?')
@@ -411,24 +411,31 @@ def manageInventory():
                     num = num + 1
         playerChoice = input('> ')
         try: 
-            int(playerChoice)
+            playerChoice = int(playerChoice)
         except ValueError:
             print('please input a number')
             manageInventory()
         num = 0
-       for item in armour.registry:
+        for item in armour.registry:
             num = num + 1
-            if num == int(playerChoice):
+            print('cuntshit')
+            if num == playerChoice:
+                print("ssss")
                 if item.armourPiece == 'head':
                     try:
+                        print("niggers")
                         if item.ID == player.currentHead:
+                            print("niggers2")
                             print('You already have ' + item.name + ' equipped')
                             manageInventory()
                         else:
+                            print("cuntshit2")
                             player.currentHead = item.ID
                             manageInventory()   
                     except AttributeError:
+                        print("fucucucuuc")
                         player.currentHead = item.ID
+                        print(player.currentHead)
                         manageInventory()
                 if item.armourPiece == 'shoulders':
                     try:
@@ -436,7 +443,7 @@ def manageInventory():
                             print('You already have ' + item.name + ' equipped')
                             manageInventory()
                         else:
-                            player.currentHead = item.ID
+                            player.currentShoulders = item.ID
                             manageInventory()
                     except AttributeError:
                         player.currentShoulders = item.ID
@@ -447,7 +454,7 @@ def manageInventory():
                             print('You already have ' + item.name + ' equipped')
                             manageInventory()
                         else:
-                            player.currentHead = item.ID
+                            player.currentChest = item.ID
                             manageInventory()
                     except AttributeError:
                         player.currentChest= item.ID
@@ -458,7 +465,7 @@ def manageInventory():
                             print('You already have ' + item.name + ' equipped')
                             manageInventory()
                         else:
-                            player.currentHead = item.ID
+                            player.currentLegs = item.ID
                             manageInventory()
                     except AttributeError:
                         player.currentLegs = item.ID
@@ -469,7 +476,7 @@ def manageInventory():
                             print('You already have ' + item.name + ' equipped')
                             manageInventory()
                         else:
-                            player.currentHead = item.ID
+                            player.currentFeet = item.ID
                             manageInventory()
                     except AttributeError:
                         player.currentFeet = item.ID
@@ -480,7 +487,7 @@ def manageInventory():
                             print('You already have ' + item.name + ' equipped')
                             manageInventory()
                         else:
-                            player.currentHead = item.ID
+                            player.currentSheild = item.ID
                             manageInventory()
                     except AttributeError:
                         player.currentShield = item.ID
