@@ -418,22 +418,16 @@ def manageInventory():
         num = 0
         for item in armour.registry:
             num = num + 1
-            print('cuntshit')
             if num == playerChoice:
-                print("ssss")
                 if item.armourPiece == 'head':
                     try:
-                        print("niggers")
                         if item.ID == player.currentHead:
-                            print("niggers2")
                             print('You already have ' + item.name + ' equipped')
                             manageInventory()
                         else:
-                            print("cuntshit2")
                             player.currentHead = item.ID
                             manageInventory()   
                     except AttributeError:
-                        print("fucucucuuc")
                         player.currentHead = item.ID
                         print(player.currentHead)
                         manageInventory()
