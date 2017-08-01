@@ -3,9 +3,9 @@ testAreaCentral = {
     'startText': 'You are in a Test Area',
         
     'npcList': 
-        {
-            '1': 'testNPC',
-        },
+        [
+            'testNPC',
+        ],
 
     'movement':
         {
