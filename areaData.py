@@ -1,10 +1,12 @@
+import npcData
+
 testAreaCentral = {
     'name': 'Test Area Central',
     'startText': 'You are in a Test Area',
         
     'npcList': 
         [
-            'testNPC',
+            npcData.testNPC,
         ],
 
     'movement':

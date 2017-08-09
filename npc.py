@@ -1,7 +1,8 @@
 import npcData
 
 def talk(npc):
-    print(npc.get('name'))
+    if npc.get('name') != None:
+        print(npc.get('name')) 
     print(npc.get('startText'))
 
     try:

@@ -1,5 +1,5 @@
 testNPC = {
-        'name': 'dickfuck',
+        'name': 'Test Npc',
         'startText': 'this is start text',
 
         'a': 
