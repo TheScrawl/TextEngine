@@ -22,3 +22,24 @@ class Armour(Item):
 
     def __str__(self):
         return "{}=====\n{}\nValue: {}\nDefence: {}".format(self.name, self.description, self.value, self.defence)
+
+#########################################################################################################################
+
+class Goldcoin(Item):
+    def __init__(self, amt):
+        self.amt = amt
+        super().__init__(
+            name = "Gold coin",
+            description = "A small round coin with {} engraved on the front.".format(str(self.amt)),
+            value = self.amt
+        )
+
+class RustyDagger(Weapon):
+    def __init__(self):
+        super().__init__(
+            name = "Rusty Dagger",
+            description = "A once well kept dagger, left to rust.",
+            value = 2
+            damage = 5
+
+            
