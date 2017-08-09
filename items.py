@@ -41,5 +41,5 @@ class RustyDagger(Weapon):
             description = "A once well kept dagger, left to rust.",
             value = 2
             damage = 5
-
+        )
             
