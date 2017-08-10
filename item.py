@@ -11,7 +11,7 @@ class weapon(object):
         self.description = description
         self.value = value
         self.damage = damage
-        self.count = 0
+        self.count = count
 
         
 class armour(object):
@@ -20,7 +20,7 @@ class armour(object):
         self.description = description
         self.value = value
         self.defence = defence
-        self.count = 0
+        self.count = count
 
 #ITEMLISTS (these should be moved to a new file in future, itemData.py or something)
         
