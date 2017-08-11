@@ -12,7 +12,7 @@ class weapon(item):
         
 
         
-class armour(object):
+class armour(item):
     def __init__(self, name, description, value, defence, count):
         super(weapon, self).__init__(name, description, value, count)
         self.defence = defence
