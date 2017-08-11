@@ -46,3 +46,9 @@ testNPC = {
             'functions': 'exit',
             },
         }
+
+testNPC2 = {
+        'name': 'test npc 2',
+        'startText': 'this is start text',
+        'functions': 'exit'
+        }

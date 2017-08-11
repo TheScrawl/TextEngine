@@ -1,37 +1,39 @@
 import npcData
 
 testAreaCentral = {
+    
     'name': 'Test Area Central',
     'startText': 'You are in a Test Area',
         
     'npcList': 
         [
             npcData.testNPC,
+            npcData.testNPC2,
         ],
 
     'movement':
         {
             '1':
                 {
-                    'id': 'testAreaNorth',
+                    'id': testAreaNorth,
                     'optionText': 'Go north to Test Area North',
                 },
 
             '2':
                 {
-                    'id': 'testAreaSouth',
+                    'id': testAreaSouth,
                     'optionText': 'Go south to Test Area South',
                 },
 
             '3':
                 {
-                    'id': 'testAreaEast',
+                    'id': testAreaEast,
                     'optionText': 'Go east to Test Area East',
                 },
 
             '4':
                 {
-                    'id': 'testAreaWest',
+                    'id': testAreaWest,
                     'optionText': 'Go west to test area west',
                 },
         }
@@ -47,7 +49,7 @@ testAreaNorth = {
         {
             '1':
                 {
-                    'id': 'testAreaCentral',
+                    id: testAreaCentral,
                     'optionText': 'Go south to test area central',
                 },
         }
@@ -64,7 +66,7 @@ testAreaSouth = {
         {
             '1':
                 {
-                    'id': 'testAreaCentral',
+                    'id': testAreaCentral,
                     'optionText': 'Go North to test area central',
                 },
         }
@@ -81,7 +83,7 @@ testAreaEast = {
         {
             '1':
                 {
-                    'id': 'testAreaCentral',
+                    'id': testAreaCentral,
                     'optionText': 'Go West to test area central',
                 },
         }
@@ -98,7 +100,7 @@ testAreaWest = {
         {
             '1':
                 {
-                    'id': 'testAreaCentral',
+                    'id': testAreaCentral,
                     'optionText': 'Go East to test area central',
                 },
         }
