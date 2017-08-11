@@ -5,20 +5,15 @@ class item(object):
         self.value = value
         self.count = count
 
-class weapon(object):
+class weapon(item):
     def __init__(self, name, description, value, damage, count):
-        self.name = name
-        self.description = description
-        self.value = value
+        super(weapon, self).__init__(name, description, value, count)
         self.damage = damage
-        self.count = count
+        
 
         
-class armour(object):
+class armour(item):
     def __init__(self, name, description, value, defence, count):
-        self.name = name
-        self.description = description
-        self.value = value
+        super(weapon, self).__init__(name, description, value, count)
         self.defence = defence
-        self.count = count
 
