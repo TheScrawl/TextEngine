@@ -1,8 +1,9 @@
-import areaData
+from areaData import areaDict as areaData
 import npcData
 import menu
 
 def move(area):
+    print(area)
     print(area.get('name'))
     print(area.get('startText'))
     if area.get('npcList') != None:
@@ -10,7 +11,7 @@ def move(area):
         for npc in area.get('npcList'):
             print(npc.get('name')) 
     for areaNum in sorted(area.get('movement')):
-        print(areaNum + ': ' + area.get('movement').get(areaNum).get('id'))
+        print(areaNum + ': ' + area.get('movement').get(str(areaNum)).get('id')))
     menu.areaMenu(area)
-move(areaData.testAreaCentral)
+move(areaData.get('testAreaCentral'))
         
