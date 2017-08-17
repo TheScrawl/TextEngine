@@ -49,7 +49,7 @@ areaDict = {
             {
                 '1':
                     {
-                        id: 'testAreaCentral',
+                        'id': 'testAreaCentral',
                         'optionText': 'Go south to test area central',
                     },
             }

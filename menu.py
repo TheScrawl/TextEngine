@@ -4,12 +4,11 @@ from areaData import areaDict as areaData
 def areaMenu(currentArea):
     choice = str(input('> ')).lower()
     if ' ' in choice:
-        (function, value) = choice.split(' ')
+        (function, option) = choice.split(' ')
           
         if str(function) == 'go':
-            if value in sorted(currentArea.get('movement')):
-                fuckshit = str(currentArea.get('movement').get(str(value)).get('id'))
-                area.move(areaData.get(fuckshit))
+            if option in currentArea.get('movement'):
+               area.move(areaData.get(currentArea.get('movement').get(option).get('id')))
 
     else:
         print('please enter two inputs')
