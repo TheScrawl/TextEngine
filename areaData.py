@@ -6,10 +6,10 @@ areaDict = {
         'startText': 'You are in a Test Area',
             
         'npcList': 
-            [
-                npcData.testNPC,
-                npcData.testNPC2,
-            ],
+            {
+                '1': npcData.testNPC,
+                '2': npcData.testNPC2,
+            },
 
         'movement':
             {
