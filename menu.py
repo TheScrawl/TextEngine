@@ -13,11 +13,14 @@ def areaMenu(currentArea):
             if option in currentArea.get('movement'):
                area.move(areaData.get(currentArea.get('movement').get(option).get('id')))
            
+            else:
+                print('you cannot go that way')
+
         if str(function) == 'talk':
             if currentArea.get('npcList') != None and option in currentArea.get('npcList'):
                 npc.talk(npcData.get(currentArea.get('npcList').get(option)))  
             else:
-                print('please enter a vaid option')
+                print('that person is not here')
                 area.move(currentArea)
         else:
             print('Please enter a valid function (e.g go, talk)')
