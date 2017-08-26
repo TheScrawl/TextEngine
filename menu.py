@@ -1,6 +1,8 @@
 from areaData import areaDict as areaData
 from npcData import npcDict as npcData
 def areaMenu(currentArea):
+    global globalCurrentArea
+    globalCurrentArea = currentArea
     import area
     import npc
     choice = str(input('> ')).lower()
@@ -12,7 +14,7 @@ def areaMenu(currentArea):
                area.move(areaData.get(currentArea.get('movement').get(option).get('id')))
            
         if str(function) == 'talk':
-            if option in currentArea.get('npcList'):
+            if currentArea.get('npcList') != None and option in currentArea.get('npcList'):
                 npc.talk(npcData.get(currentArea.get('npcList').get(option)))  
             else:
                 print('please enter a vaid option')
