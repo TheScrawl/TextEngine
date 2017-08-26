@@ -22,4 +22,3 @@ def talk(npc):
     npc = npc.get(choice)
     talk(npc)
 
-talk(npcData.testNPC)

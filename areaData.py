@@ -7,8 +7,8 @@ areaDict = {
             
         'npcList': 
             {
-                '1': npcData.testNPC,
-                '2': npcData.testNPC2,
+                '1': 'testNPC',
+                '2': 'testNPC2',
             },
 
         'movement':

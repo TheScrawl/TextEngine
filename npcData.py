@@ -1,4 +1,5 @@
-testNPC = {
+npcDict = {
+    'testNPC': {
         'name': 'Test Npc',
         'startText': 'this is start text',
 
@@ -45,10 +46,11 @@ testNPC = {
             
             'functions': 'exit',
             },
-        }
+        },
 
-testNPC2 = {
+    'testNPC2': {
         'name': 'test npc 2',
         'startText': 'this is start text',
         'functions': 'exit'
-        }
+       },
+}
