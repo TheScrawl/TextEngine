@@ -24,6 +24,7 @@ At this point users will be theoretically able to write their own text based gam
 * Tool to autogen dictionary datastructures from simple text files
 * graphical tool to generate the text files and visualise the maps and whatnot
 * guide on how to use the tool
+
 After these things are done, Textengine will be pretty much what I would consider a "finished" state
 ### Other things I want to add or potentially do
 * A map system
