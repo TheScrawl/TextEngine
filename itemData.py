@@ -8,7 +8,7 @@ gold = i.item('Gold', 'A small gold coin', 100, 0)
 emerald = i.item('Emerald', 'A small shiny green gem', 1000)
 
 #Quest Items
-shibbledibble = i.item('Shibbledibble', 'Its shibbledibble, its used for a quest', 'notforsale' , 0)
+shibbledibble = i.item('Shibbledibble', 'Its shibbledibble, its used for a quest', 'notforsale' , 0) # © 2017 The Scrawl 
 magicSwordOfDoomAndDestruction = i.weapon('Magic Sword of Doom and Destruction', 'Its the magic sword of doom and destruction, its very important', 4, 'notforsale', 0)
 
 #Misc
