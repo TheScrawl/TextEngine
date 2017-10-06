@@ -1,7 +1,9 @@
 from areaData import areaDict as areaData
 from npcData import npcDict as npcData
 from menu import areaMenu
-class color:
+
+
+class SetColor:
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
     DARKCYAN = '\033[36m'
@@ -16,15 +18,15 @@ class color:
 
 def move(area):
     print('')
-    print(color.BOLD + area.get('name') + color.END)
+    print(SetColor.BOLD + area.get('name') + SetColor.END)
     print(area.get('startText'))
     if area.get('npcList') is not None:
         print('')
-        print(color.BOLD + 'Area NPCs:' + color.END)
+        print(SetColor.BOLD + 'Area NPCs:' + SetColor.END)
         for key, value in sorted(area.get('npcList').items()):
             print(key + ': ' + npcData.get(value).get('name'))
         print('')
-    print(color.BOLD + 'Movement Options' + color.END)
+    print(SetColor.BOLD + 'Movement Options' + SetColor.END)
     for key, value in sorted(area.get('movement').items()):
         print(key + ': ' + value.get('optionText'))
     areaMenu(area)
