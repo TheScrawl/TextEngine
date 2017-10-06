@@ -1,14 +1,14 @@
-import npcData
 import area
 import menu
 
+
 def talk(npc):
-    if npc.get('name') != None:
+    if npc.get('name') is not None:
         print(npc.get('name')) 
     print(npc.get('startText'))
 
     try:
-        if 'exit' in npc.get('functions'): #catch exit function and quit talk
+        if 'exit' in npc.get('functions'):
             print('exiting dialogue')
             area.move(menu.globalCurrentArea) 
         else:
@@ -23,4 +23,3 @@ def talk(npc):
     
     npc = npc.get(choice)
     talk(npc)
-

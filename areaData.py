@@ -1,6 +1,5 @@
-import npcData
 areaDict = {
-    'testAreaCentral' : {
+    'testAreaCentral': {
         
         'name': 'Test Area Central',
         'startText': 'You are in a Test Area',
@@ -39,7 +38,7 @@ areaDict = {
             }
         },
 
-    'testAreaNorth' : {
+    'testAreaNorth': {
         'name': 'Test Area North',
         'startText': 'You are in Test Area North',
 
@@ -56,7 +55,7 @@ areaDict = {
 
         },       
 
-    'testAreaSouth' : {
+    'testAreaSouth': {
         'name': 'Test Area South',
         'startText': 'You are in Test Area South',
 
@@ -73,7 +72,7 @@ areaDict = {
 
         },        
 
-    'testAreaEast' : {
+    'testAreaEast': {
         'name': 'Test Area East',
         'startText': 'You are in Test Area East',
 
@@ -90,7 +89,7 @@ areaDict = {
 
         },       
         
-    'testAreaWest' : {
+    'testAreaWest': {
         'name': 'Test Area West',
         'startText': 'You are in Test Area West',
 

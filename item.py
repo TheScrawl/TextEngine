@@ -21,4 +21,3 @@ class armour(object):
         self.value = value
         self.defence = defence
         self.count = count
-

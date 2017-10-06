@@ -1,5 +1,6 @@
 from areaData import areaDict as areaData
 from npcData import npcDict as npcData
+globalCurrentArea = None
 def areaMenu(currentArea):
     global globalCurrentArea
     globalCurrentArea = currentArea
@@ -17,7 +18,7 @@ def areaMenu(currentArea):
                 print('you cannot go that way')
 
         if str(function) == 'talk':
-            if currentArea.get('npcList') != None and option in currentArea.get('npcList'):
+            if currentArea.get('npcList') is not None and option in currentArea.get('npcList'):
                 npc.talk(npcData.get(currentArea.get('npcList').get(option)))  
             else:
                 print('that person is not here')

@@ -18,7 +18,7 @@ def move(area):
     print('')
     print(color.BOLD + area.get('name') + color.END)
     print(area.get('startText'))
-    if area.get('npcList') != None:
+    if area.get('npcList') is not None:
         print('')
         print(color.BOLD + 'Area NPCs:' + color.END)
         for key, value in sorted(area.get('npcList').items()):
@@ -29,6 +29,6 @@ def move(area):
         print(key + ': ' + value.get('optionText'))
     areaMenu(area)
 
+
 if __name__ == '__main__':
     move(areaData.get('testAreaCentral'))
-        
