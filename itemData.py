@@ -4,8 +4,11 @@ from item import misc
 
 #Testing Items
 testItem = misc('test item', 'its a test item', 69, 10)
+testItem2 = misc('test item 2', 'its a test item as well', 69, 10)
 testWeapon = weapon('test weapon', 'its a test weapon', 45, 13, 1)
+testWeapon2 = weapon('test weapon 2', 'its a test weapon as well', 45, 13, 1)
 testArmour = armour('test armour', 'its test armour', 420, 11, 2)
+testArmour2 = armour('test armour 2 ', 'its test armour as well', 420, 11, 2)
 
 # Currencies
 copper = misc('Copper', 'A small copper coin', 1, 0)

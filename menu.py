@@ -53,22 +53,24 @@ def inventory():
 		print(SetColor.BOLD + 'Inventory' + SetColor.END)
 		print('Options:')
 		print('1: View Items')
-		print('2: Equip or Unequip Items')
-		print('3: Drop Items')
-		print('4: Exit')
+		print('2: Equip or Unequip Items') #TODO
+		print('3: Drop Items') #TODO
+		print('4: Exit') #TODO
 
-		print(i.weapon.playerWeapons)
-
+		print(i.weapon.playerList)
+		print(i.misc.playerList)
 		choice = str(input('> '))
 		if choice == '1':
 
 				print('Items:')
-				for misc in i.misc.playerMisc:
+				for misc in i.misc.playerList:
 					print(misc.name + ' | ' + misc.description + ' | ' + str(misc.value) + ' | ' + str(misc.count))
 
-				print('Weapons:')
-				for weapon in i.weapon.playerWeapons:
-					print(weapon.name + ' | ' + weapon.description + ' | ' + str(weapon.value) + str(weapon.damage) + ' | ' + ' | ' + str(weapon.count))
+				print('\nWeapons:')
+				for weapon in i.weapon.playerList:
+					print(weapon.name + ' | ' + weapon.description + ' | ' + str(weapon.value) + ' | ' + str(weapon.damage) + ' | ' + str(weapon.count))
 
-
-inventory()
+				print('\nArmour:')
+				for armour in i.armour.playerList:
+					print(armour.name + ' | ' + armour.description + ' | ' + str(armour.value) + ' | ' + str(armour.defence) + ' | ' + str(armour.count))
+			inventory()
