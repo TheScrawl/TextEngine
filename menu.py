@@ -1,7 +1,7 @@
 from areaData import areaDict as areaData
 from npcData import npcDict as npcData
 import itemData as i
-
+import TablePrint
 
 class SetColor:
 		PURPLE = '\033[95m'
@@ -62,15 +62,22 @@ def inventory():
 		choice = str(input('> '))
 		if choice == '1':
 
-				print('Items:')
-				for misc in i.misc.playerList:
-					print(misc.name + ' | ' + misc.description + ' | ' + str(misc.value) + ' | ' + str(misc.count))
+			print('\nItems:')
+			itemList = []
+			for misc in i.misc.playerList:
+				itemList.append([misc.name, misc.description, misc.value, misc.count])
+			TablePrint.table(['Name', 'Description', 'Value', 'Count'], *itemList)
 
-				print('\nWeapons:')
-				for weapon in i.weapon.playerList:
-					print(weapon.name + ' | ' + weapon.description + ' | ' + str(weapon.value) + ' | ' + str(weapon.damage) + ' | ' + str(weapon.count))
+			print('\nWeapons:')
+			weaponList = []
+			for weapon in i.weapon.playerList:
+				weaponList.append([weapon.name, weapon.description,str(weapon.value), str(weapon.damage), str(weapon.count)])
+			TablePrint.table(['Name', 'Desciption', 'Value', 'Damage', 'Count'], *weaponList)
 
-				print('\nArmour:')
-				for armour in i.armour.playerList:
-					print(armour.name + ' | ' + armour.description + ' | ' + str(armour.value) + ' | ' + str(armour.defence) + ' | ' + str(armour.count))
-			inventory()
+			print('\nArmour:')
+			armourList = []
+			for armour in i.armour.playerList:
+				armourList.append([armour.name, armour.description, str(armour.value), str(armour.defence), str(armour.count)])
+			TablePrint.table(['Name', "Description", 'Value', 'Defence', 'Count'], *armourList)
+
+inventory()
