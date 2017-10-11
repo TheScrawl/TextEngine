@@ -1,6 +1,7 @@
 from areaData import areaDict as areaData
 from npcData import npcDict as npcData
-import itemData as i
+import itemData
+import player
 import TablePrint
 
 
@@ -63,23 +64,39 @@ def inventory():
 
 			print('\nItems:')
 			itemList = []
-			for misc in i.misc.playerList:
+			for misc in player.miscList:
 				itemList.append([misc.name, misc.description, misc.value, misc.count])
 			TablePrint.table(['Name', 'Description', 'Value', 'Count'], *itemList)
 
 			print('\nWeapons:')
 			weaponList = []
-			for weapon in i.weapon.playerList:
+			for weapon in player.weaponList:
 				weaponList.append([weapon.name, weapon.description, str(weapon.value), str(weapon.damage), str(weapon.count)])
-			TablePrint.table(['Name', 'Desciption', 'Value', 'Damage', 'Count'], *weaponList)
+			TablePrint.table(['Name', 'Description', 'Value', 'Damage', 'Count'], *weaponList)
 
 			print('\nArmour:')
 			armourList = []
-			for armour in i.armour.playerList:
+			for armour in player.armourList:
 				armourList.append([armour.name, armour.description, str(armour.value), str(armour.defence), str(armour.count)])
 			TablePrint.table(['Name', "Description", 'Value', 'Defence', 'Count'], *armourList)
 
 			inventory()
+
+		if choice == '2':
+			print('What type of item would you like to equip/unequip')
+			print('1: Armour')
+			print('2: Weapons')
+			print('3: Other')
+
+			choice = str(input('> '))
+			if choice == '1':
+				print('Current Loadout: ')
+				print('1 Head: ' + player.equippedArmourHead.name)
+				print('2 Shoulders: ' + player.equippedArmourShoulders.name)
+				print('3 Torso: ' + player.equippedArmourTorso.name)
+				print('4 Hands: ' + player.equippedArmourHands.name)
+				print('5 Legs: ' + player.equippedArmourLegs.name)
+				print('6 Feet: ' + player.equippedArmourFeet.name)
 
 
 inventory()

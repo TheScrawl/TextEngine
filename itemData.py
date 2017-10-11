@@ -2,6 +2,11 @@ from item import armour
 from item import weapon
 from item import misc
 
+#System Items
+#These items are important for the game to run properly, please do not remove them
+#emptyArmour = armour('None', 'There is nothing equipped', 0, 0, 0)
+#emptyWeapon = weapon('None', 'There is nothing equipped', 0, 0, 0)
+
 #Testing Items
 testItem = misc('test item', 'its a test item', 69, 10)
 testItem2 = misc('test item 2', 'its a test item as well', 69, 10)
