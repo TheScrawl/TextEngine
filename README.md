@@ -2,7 +2,7 @@
 Python program that generates text based games from text files written in a simple scripting language
 
 ## What is it?
-Currently, Text Engine is in early early alpha stages, at present it simply is just the framework of a text based game that pulls its data from dictionary based datasets. Despite its lack of any usefullnes or interesting code in its present state, there is a clear plan for what it should do in future.
+Currently, Text Engine is in early early alpha stages, at present it simply is just the framework of a text based game that pulls its data from dictionary based datasets. Despite its lack of any usefulness or interesting code in its present state, there is a clear plan for what it should do in future.
 
 ## What will it be?
 Text Engine is going to be a game engine that generates text based RPGs using a quick and easy scripting language or potentially GUI editor, allowing people to flesh out ideas for text based games quickly and easily.
