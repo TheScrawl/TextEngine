@@ -1,4 +1,4 @@
-from item import emptyItem
+import extraData
 
 miscList = []
 armourList = []
@@ -9,13 +9,16 @@ healthPoints = 100
 manaPoints = 100
 staminaPoints = 100
 
+defenceStat = 0
+attackStat = 0
+
 #Equipped Items
-equippedArmourHead = emptyItem
-equippedArmourShoulders = emptyItem
-equippedArmourTorso = emptyItem
-equippedArmourHands = emptyItem
-equippedArmourLegs = emptyItem
-equippedArmourFeet = emptyItem
+equippedArmourHead = extraData.emptyItem
+equippedArmourShoulders = extraData.emptyItem
+equippedArmourTorso = extraData.emptyItem
+equippedArmourHands = extraData.emptyItem
+equippedArmourLegs = extraData.emptyItem
+equippedArmourFeet = extraData.emptyItem
 
 equippedWeapons = []
 equippedMisc = []

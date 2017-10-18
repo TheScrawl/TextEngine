@@ -52,51 +52,61 @@ def areaMenu(currentArea):
 
 
 def inventory():
-		print(SetColor.BOLD + 'Inventory' + SetColor.END)
-		print('Options:')
-		print('1: View Items')
-		print('2: Equip or Unequip Items')	#TODO
-		print('3: Drop Items')	#TODO
-		print('4: Exit')	#TODO
+	print(SetColor.BOLD + 'Inventory' + SetColor.END)
+	print('Options:')
+	print('1: View Items')
+	print('2: Equip or Unequip Items')	#TODO
+	print('3: Drop Items')	#TODO
+	print('4: Exit')	#TODO
+
+	choice = str(input('> '))
+	if choice == '1':
+
+		print('\nItems:')
+		itemList = []
+		for misc in player.miscList:
+			itemList.append([misc.name, misc.description, misc.value, misc.count])
+		TablePrint.table(['Name', 'Description', 'Value', 'Count'], *itemList)
+
+		print('\nWeapons:')
+		weaponList = []
+		for weapon in player.weaponList:
+			weaponList.append([weapon.name, weapon.description, weapon.weaponType, str(weapon.value), str(weapon.damage), str(weapon.count)])
+		TablePrint.table(['Name', 'Description', 'Type', 'Value', 'Damage', 'Count'], *weaponList)
+
+		print('\nArmour:')
+		armourList = []
+		for armour in player.armourList:
+			armourList.append([armour.name, armour.description, armour.slot, str(armour.value), str(armour.defence), str(armour.count)])
+		TablePrint.table(['Name', 'Description', 'slot', 'Value', 'Defence', 'Count'], *armourList)
+
+		inventory()
+
+	if choice == '2':
+		print('What type of item would you like to equip/unequip')
+		print('1: Armour')
+		print('2: Weapons')
+		print('3: Other')
 
 		choice = str(input('> '))
 		if choice == '1':
-
-			print('\nItems:')
-			itemList = []
-			for misc in player.miscList:
-				itemList.append([misc.name, misc.description, misc.value, misc.count])
-			TablePrint.table(['Name', 'Description', 'Value', 'Count'], *itemList)
-
-			print('\nWeapons:')
-			weaponList = []
-			for weapon in player.weaponList:
-				weaponList.append([weapon.name, weapon.description, str(weapon.value), str(weapon.damage), str(weapon.count)])
-			TablePrint.table(['Name', 'Description', 'Value', 'Damage', 'Count'], *weaponList)
-
-			print('\nArmour:')
-			armourList = []
-			for armour in player.armourList:
-				armourList.append([armour.name, armour.description, str(armour.value), str(armour.defence), str(armour.count)])
-			TablePrint.table(['Name', "Description", 'Value', 'Defence', 'Count'], *armourList)
-
-			inventory()
-
-		if choice == '2':
-			print('What type of item would you like to equip/unequip')
-			print('1: Armour')
-			print('2: Weapons')
-			print('3: Other')
-
+			print('Current Loadout: ')
+			print('1 Head: ' + player.equippedArmourHead.name)
+			print('2 Shoulders: ' + player.equippedArmourShoulders.name)
+			print('3 Torso: ' + player.equippedArmourTorso.name)
+			print('4 Hands: ' + player.equippedArmourHands.name)
+			print('5 Legs: ' + player.equippedArmourLegs.name)
+			print('6 Feet: ' + player.equippedArmourFeet.name)
+			print('Which slot would you like to change item?')
 			choice = str(input('> '))
 			if choice == '1':
-				print('Current Loadout: ')
-				print('1 Head: ' + player.equippedArmourHead.name)
-				print('2 Shoulders: ' + player.equippedArmourShoulders.name)
-				print('3 Torso: ' + player.equippedArmourTorso.name)
-				print('4 Hands: ' + player.equippedArmourHands.name)
-				print('5 Legs: ' + player.equippedArmourLegs.name)
-				print('6 Feet: ' + player.equippedArmourFeet.name)
+				print('what item would you like to equip?')
+				counter = 0
+				for i in player.armourList:
+					if i.slot == 'feet':
+						counter = counter + 1
+						print(str(counter) + ': ' + i.name)
 
 
-inventory()
+if __name__ == '__main__':
+	inventory()
