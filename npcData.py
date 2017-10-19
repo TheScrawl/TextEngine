@@ -3,7 +3,7 @@ npcDict = {
         'name': 'Test Npc',
         'startText': 'this is start text',
 
-        'a': 
+        'a':
             {
                 'optionText': 'this is option a',
                 'startText': 'you chose option a',
@@ -25,7 +25,7 @@ npcDict = {
                             {
                                 'optionText': 'this is option a 1 2',
                                 'startText': 'you chose option a 1 2',
-                        
+
                                 'functions': 'exit',
                             },
                     },

@@ -1,10 +1,10 @@
 areaDict = {
     'testAreaCentral': {
-        
+
         'name': 'Test Area Central',
         'startText': 'You are in a Test Area',
-            
-        'npcList': 
+
+        'npcList':
             {
                 '1': 'testNPC',
                 '2': 'testNPC2',
@@ -53,7 +53,7 @@ areaDict = {
                     },
             }
 
-        },       
+        },
 
     'testAreaSouth': {
         'name': 'Test Area South',
@@ -105,4 +105,4 @@ areaDict = {
             }
 
         },   
-    }  
+    }
