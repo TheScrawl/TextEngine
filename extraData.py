@@ -9,3 +9,5 @@ class systemItem(object):
 
 
 emptyItem = systemItem('None', 'There is nothing equipped')
+
+armourSlots = ['Head', 'Shoulders', 'Torso', 'Hands', 'Legs', 'Feet']

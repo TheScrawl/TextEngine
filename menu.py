@@ -3,7 +3,7 @@ from npcData import npcDict as npcData
 import itemData
 import player
 import TablePrint
-
+import extraData
 
 class SetColor:
 		PURPLE = '\033[95m'
@@ -91,21 +91,17 @@ def inventory():
 		choice = str(input('> '))
 		if choice == '1':
 			print('Current Loadout: ')
-			print('1 Head: ' + player.equippedArmourHead.name)
-			print('2 Shoulders: ' + player.equippedArmourShoulders.name)
-			print('3 Torso: ' + player.equippedArmourTorso.name)
-			print('4 Hands: ' + player.equippedArmourHands.name)
-			print('5 Legs: ' + player.equippedArmourLegs.name)
-			print('6 Feet: ' + player.equippedArmourFeet.name)
+			counter = 0
+			for slot in extraData.armourSlots:
+				counter = counter + 1
+				print(str(counter) + ': ' + slot)
 			print('Which slot would you like to change item?')
 			choice = str(input('> '))
-			if choice == '1':
-				print('what item would you like to equip?')
-				counter = 0
-				for i in player.armourList:
-					if i.slot == 'feet':
-						counter = counter + 1
-						print(str(counter) + ': ' + i.name)
+			counter = 0
+			for item in player.armourList:
+				if item.slot.lower() == extraData.armourSlots[int(choice) - 1].lower():
+					counter = counter + 1
+					print(str(counter) + ': ' + item.name)
 
 
 if __name__ == '__main__':

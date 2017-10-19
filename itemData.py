@@ -2,18 +2,13 @@ from item import armour
 from item import weapon
 from item import misc
 
-#System Items
-#These items are important for the game to run properly, please do not remove them
-#emptyArmour = armour('None', 'There is nothing equipped', 0, 0, 0)
-#emptyWeapon = weapon('None', 'There is nothing equipped', 0, 0, 0)
-
-#Testing Items
+#Testing ItemsS
 testItem = misc('test item', 'its a test item', 69, 10)
 testItem2 = misc('test item 2', 'its a test item as well', 69, 10)
-testWeapon = weapon('test weapon', 'its a test weapon', 'sword', 45, 13, 1)
-testWeapon2 = weapon('test weapon 2', 'its a test weapon as well', 'spear', 45, 13, 1)
-testHelmet = armour('test armour', 'its test armour', 'head', 420, 11, 2)
-testBoots = armour('test armour 2 ', 'its test armour as well', 'feet', 420, 11, 2)
+testWeapon = weapon('test sword', 'its a test weapon', 'sword', 45, 13, 1)
+testWeapon2 = weapon('test spear', 'its a test weapon as well', 'spear', 45, 13, 1)
+testHelmet = armour('test helmet', 'its test armour', 'head', 420, 11, 2)
+testBoots = armour('test boots', 'its test armour as well', 'feet', 420, 11, 2)
 
 # Currencies
 copper = misc('Copper', 'A small copper coin', 1, 0)
