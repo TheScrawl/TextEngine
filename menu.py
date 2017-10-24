@@ -80,6 +80,20 @@ def inventory():
 			armourList.append([armour.name, armour.description, armour.slot, str(armour.value), str(armour.defence), str(armour.count)])
 		TablePrint.table(['Name', 'Description', 'slot', 'Value', 'Defence', 'Count'], *armourList)
 
+		print('\nCurrently Equipped')
+		TablePrint.table(
+			['Head', 'Shoulders', 'Torso', 'Hands', 'Legs', 'Feet', 'Weapon'],
+			[
+				player.equippedArmourHead.name,
+				player.equippedArmourShoulders.name,
+				player.equippedArmourTorso.name,
+				player.equippedArmourHands.name,
+				player.equippedArmourLegs.name,
+				player.equippedArmourFeet.name,
+				*player.equippedWeapons,
+			]
+			)
+
 		inventory()
 
 	if choice == '2':
@@ -88,21 +102,55 @@ def inventory():
 		print('2: Weapons')
 		print('3: Other')
 
-		choice = str(input('> '))
-		if choice == '1':
+		typeChoice = str(input('> '))
+		if typeChoice == '1':
 			print('Current Loadout: ')
 			counter = 0
 			for slot in extraData.armourSlots:
 				counter = counter + 1
 				print(str(counter) + ': ' + slot)
 			print('Which slot would you like to change item?')
-			choice = str(input('> '))
+			slotChoice = str(input('> '))
 			counter = 0
 			for item in player.armourList:
-				if item.slot.lower() == extraData.armourSlots[int(choice) - 1].lower():
+				if item.slot.lower() == extraData.armourSlots[int(slotChoice) - 1].lower():
 					counter = counter + 1
 					print(str(counter) + ': ' + item.name)
+			if counter == 0:
+				print('You dont have any items for that slot')
+				inventory()
 
+			itemChoice = str(input('> '))
+			counter = 0
+			for item in player.armourList:
+				counter = counter + 1
+				if str(counter) == itemChoice and item.slot.lower() == extraData.armourSlots[int(slotChoice) - 1].lower():
+					if slotChoice == '1':
+						player.equippedArmourHead = item
+					if slotChoice == '2':
+						player.equippedArmourShoulders = item
+					if slotChoice == '3':
+						player.equippedArmourTorso = item
+					if slotChoice == '4':
+						player.equippedArmourHands = item
+					if slotChoice == '5':
+						player.equippedArmourLegs = item
+					if slotChoice == '6':
+						player.equippedArmourFeet = item
+
+					player.defenceStat = (
+						player.equippedArmourHead.defence +
+						player.equippedArmourShoulders.defence +
+						player.equippedArmourTorso.defence +
+						player.equippedArmourHands.defence +
+						player.equippedArmourLegs.defence +
+						player.equippedArmourFeet.defence)
+					print('You equipped ' + player.equippedArmourHead.name)
+
+					slotChoice = None
+					itemChoice = None
+					counter = None
+				inventory()
 
 if __name__ == '__main__':
 	inventory()

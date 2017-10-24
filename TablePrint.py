@@ -23,7 +23,6 @@ def table(*argv):
 			itemCount = itemCount + 1
 			if itemCount <= len(dataSet):
 				print(str(item) + ' ' * (longestStr - len(str(item)) + 1), end = '|')
-
 		x = len(dataSet)
 		while x < longestData:
 			print(' ' * longestStr, end = '|')

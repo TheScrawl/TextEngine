@@ -20,5 +20,5 @@ equippedArmourHands = extraData.emptyItem
 equippedArmourLegs = extraData.emptyItem
 equippedArmourFeet = extraData.emptyItem
 
-equippedWeapons = []
-equippedMisc = []
+equippedWeapons = [None]
+equippedMisc = [None]

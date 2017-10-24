@@ -3,11 +3,13 @@
 
 
 class systemItem(object):
-	def __init__(self, name, description):
+	def __init__(self, name, description, attack, defence):
 		self.name = name
 		self.description = description
+		self.attack = attack
+		self.defence = defence
 
 
-emptyItem = systemItem('None', 'There is nothing equipped')
+emptyItem = systemItem('None', 'There is nothing equipped', 0, 0)
 
 armourSlots = ['Head', 'Shoulders', 'Torso', 'Hands', 'Legs', 'Feet']
