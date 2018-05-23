@@ -1,3 +1,5 @@
+# OLD SPAGGHETTI CODE PLEASE USE CAUTION. DEPRECIATED, SEE SPIRITUAL SUCCESSOR https://github.com/TheScrawl/ncpyrpg
+
 # TextEngine
 Python program that generates text based games from text files written in a simple scripting language
 
